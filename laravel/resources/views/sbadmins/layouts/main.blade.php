@@ -3,7 +3,7 @@
 
 <head>
     <title>@yield("title")</title>
-    @include('sbadmins.subviews.head')
+    @include('sbadmins.partials.head')
 
 </head>
 
@@ -13,7 +13,10 @@
 <div id="wrapper">
 
     <!-- Sidebar -->
-    @include('sbadmins.subviews.sidebar')
+    <ul>
+
+        @include('sbadmins.partials.sidebar')
+    </ul>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -21,19 +24,24 @@
 
         <!-- Main Content -->
         <div id="content">
-            <!-- Topbar -->
-            @include('sbadmins.subviews.header')
-            <!-- End of Topbar -->
+
+        @include('sbadmins.partials.header')
+
+
+        <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
-            @yield("content")
+            <div>
+
+                @yield("content")
+            </div>
             <!-- /.container-fluid -->
 
         </div>
         <!-- End of Main Content -->
 
         <!-- Footer -->
-    @include('sbadmins.subviews.footer')
+    @include('sbadmins.partials.footer')
     <!-- End of Footer -->
 
     </div>
@@ -42,7 +50,7 @@
 </div>
 <!-- End of Page Wrapper -->
 
-@include('sbadmins.subviews.js')
+@include('sbadmins.partials.js')
 </body>
 
 </html>
